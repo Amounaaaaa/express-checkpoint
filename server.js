@@ -10,7 +10,7 @@ const logTime=function(req,res,next){
     let day=date.getDay();
     let hours=date.getHours();
 
-  if (day<8 && hours>=9 && hours<=11){ next();}
+  if (day<6 && hours>=9 && hours<=17){ next();}
   else{
       console.log("Site not Available")
      res.sendFile(__dirname+'/public/noAvailable.html')
